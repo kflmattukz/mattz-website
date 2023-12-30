@@ -1,6 +1,7 @@
 {
   "name": "mattz-website",
   "type": "module",
+  "author" : "kflmattukz",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
