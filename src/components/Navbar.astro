@@ -1,45 +1,40 @@
 ---
-import Section from "./Section.astro";
 import Link from "./Link.astro";
 ---
 
-<Section id="navbar">
-  <nav class="flex items-center justify-between">
-    <div class="text-2xl font-bold font-sans uppercase">mattz</div>
-    <div
-      class="hidden sm:block items-center justify-center space-x-2 capitalize"
+<nav id="navbar" class="flex items-center justify-between">
+  <div class="text-2xl font-bold font-sans uppercase">mattz</div>
+  <div class="hidden sm:block items-center justify-center space-x-2 capitalize">
+    <Link href="/home" text="Home" />
+    <Link href="/portofolio" text="Portofolio" />
+    <Link href="/blogs" text="Blogs" />
+    <Link href="/tutorials" text="Tutorials" />
+  </div>
+  <div id="burger-menu" class="block sm:hidden cursor-pointer">
+    <svg
+      class="w-8 h-8"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <Link href="/home" text="Home" />
-      <Link href="/portofolio" text="Portofolio" />
-      <Link href="/blogs" text="Blogs" />
-      <Link href="/tutorials" text="Tutorials" />
-    </div>
-    <div id="burger-menu" class="block sm:hidden cursor-pointer">
-      <svg
-        class="w-8 h-8"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M4 18L20 18"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"></path>
-        <path
-          d="M4 12L20 12"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"></path>
-        <path
-          d="M4 6L20 6"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"></path>
-      </svg>
-    </div>
-    <div>
-      <div>some social media here...</div>
-    </div>
-  </nav>
-</Section>
+      <path
+        d="M4 18L20 18"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"></path>
+      <path
+        d="M4 12L20 12"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"></path>
+      <path
+        d="M4 6L20 6"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"></path>
+    </svg>
+  </div>
+  <div>
+    <div>social media</div>
+  </div>
+</nav>
