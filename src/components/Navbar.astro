@@ -1,40 +1,39 @@
 ---
 import Link from "./Link.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <nav id="navbar" class="flex items-center justify-between">
-  <div class="text-2xl font-bold font-sans uppercase">mattz</div>
-  <div class="hidden sm:block items-center justify-center space-x-2 capitalize">
-    <Link href="/home" text="Home" />
-    <Link href="/portofolio" text="Portofolio" />
-    <Link href="/blogs" text="Blogs" />
-    <Link href="/tutorials" text="Tutorials" />
-  </div>
-  <div id="burger-menu" class="block sm:hidden cursor-pointer">
-    <svg
-      class="w-8 h-8"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+  <div class="text-2xl font-bold">mattz</div>
+  <div class="flex items-center space-x-3">
+    <div
+      class="hidden sm:block items-center justify-center space-x-2 capitalize"
     >
-      <path
-        d="M4 18L20 18"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"></path>
-      <path
-        d="M4 12L20 12"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"></path>
-      <path
-        d="M4 6L20 6"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"></path>
-    </svg>
-  </div>
-  <div>
-    <div>social media</div>
+      <Link
+        class="px-3 py-2 bg-slate-100 hover:bg-slate-200 active:bg-slate-400 rounded-full"
+        href="/home"
+        text="Home"
+      />
+      <Link
+        class="px-3 py-2 bg-slate-100 hover:bg-slate-200 active:bg-slate-400 rounded-full"
+        href="/portofolio"
+        text="Portofolio"
+      />
+      <Link
+        class="px-3 py-2 bg-slate-100 hover:bg-slate-200 active:bg-slate-400 rounded-full"
+        href="/blogs"
+        text="Blogs"
+      />
+      <Link
+        class="px-3 py-2 bg-slate-100 hover:bg-slate-200 active:bg-slate-400 rounded-full"
+        href="/tutorials"
+        text="Tutorials"
+      />
+    </div>
+    <Icon
+      id="burger-menu"
+      class="h-8 w-8 block sm:hidden cursor-pointer"
+      name="burger-menu"
+    />
   </div>
 </nav>

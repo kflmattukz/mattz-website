@@ -1,7 +1,42 @@
 ---
-
+import Card from "./Card.astro";
 ---
 
-<div id="hero">
-  <h2>This is hero Section...</h2>
+<div id="hero" class="max-w-[800px] max-h-[400px] mx-auto">
+  <div
+    class="p-4 grid md:grid-cols-3 md:grid-rows-2 grid-flow-row gap-3 h-[600px] md:h-[300px]"
+  >
+    <div class="md:col-span-2 md:row-span-2">
+      <div
+        class="h-full w-full rounded-lg p-5 bg-gradient-to-bl from-fuchsia-200 via-green-300 to-sky-700"
+      >
+        <h2 id="name" class="text-3xl font-light text-slate-700">
+          Hello, I'm <span class="font-bold">Sulkifli Asmunandar</span>
+        </h2>
+        <h3 class="pt-2 leading-5 text-slate-600">
+          Frontend webdev base on indonesia, love to work alone & teams.
+        </h3>
+      </div>
+    </div>
+    <div class="row-span-1">
+      <div
+        class="h-full w-full rounded-lg p-3 bg-gradient-to-l from-lime-300 via-green-300 to-sky-400"
+      >
+        ...
+      </div>
+    </div>
+    <div class="row-span-1">
+      <div
+        class="h-full w-full rounded-lg p-3 bg-gradient-to-br from-violet-800 via-sky-500 to-gray-100"
+      >
+        ...
+      </div>
+    </div>
+  </div>
 </div>
+
+<style>
+  #name {
+    font-family: Geist;
+  }
+</style>
