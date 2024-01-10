@@ -1,13 +1,28 @@
 ---
-import Layout from "@layouts/Layout.astro";
+import BurgerMenu from "@components/BurgerMenu.astro";
 import Header from "@components/Header.astro";
 import Hero from "@components/Hero.astro";
+import Layout from "@layouts/Layout.astro";
+import Biography from "@components/Biography.astro";
+import Project from "@components/Project.astro";
 import Footer from "@components/Footer.astro";
 ---
 
 <Layout title="Welcome to mattz Website - Homepage">
   <Header />
   <Hero />
-  <!-- <div class="h-[2000px]"></div> -->
+  <Biography />
+  <Project />
+  <BurgerMenu />
   <Footer />
 </Layout>
+
+<style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+  .logo {
+    font-family: Manrope;
+  }
+  .links {
+    font-family: Manrope;
+  }
+</style>

@@ -1,10 +1,26 @@
 ---
-import Navbar from "./Navbar.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <header
-  id="header"
-  class="px-4 py-5 bg-slate-50 text-slate-700 drop-shadow-sm fixed w-full z-10"
+  class="mx-auto mt-3 hidden max-w-[600px] items-center justify-between rounded-full px-5 py-2 leading-6 ring-1 ring-slate-900/10 sm:flex"
 >
-  <Navbar />
+  <div
+    class="logo hidden text-xl font-extrabold uppercase tracking-wide sm:block"
+  >
+    Sulkifli
+  </div>
+  <nav
+    class="links font-Regular hidden space-x-2 text-base duration-300 sm:block hover:[&_a]:text-slate-700/85 hover:[&_a]:underline"
+  >
+    <a href="#">Portofolio</a>
+    <a href="#">Projects</a>
+    <a href="#">Blogs</a>
+    <a href="#">Contact me</a>
+  </nav>
+  <div
+    class="hidden cursor-pointer rounded-full border border-slate-300 bg-slate-800 p-1 text-slate-50 hover:bg-slate-800/75 sm:block"
+  >
+    <Icon class="h-8 w-8" name="lamp-dark" />
+  </div>
 </header>
