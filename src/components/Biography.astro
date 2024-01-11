@@ -1,38 +1,45 @@
 ---
 interface Biography {
-  years: string;
+  yearStart: string;
+  yearEnd: string;
   desc: string;
 }
 const biographys: Biography[] = [
   {
-    years: "1995 March 19",
+    yearStart: "1995/03/19",
+    yearEnd: "",
     desc: "I'm birth at Jeneponto, South Sulawesi Indonesia",
   },
   {
-    years: "2000-2006",
+    yearStart: "2000",
+    yearEnd: "2006",
     desc: "Elementary School at SD Center Tolo, Jeneponto, South Sulawesi",
   },
   {
-    years: "2006-2009",
+    yearStart: "2006",
+    yearEnd: "2009",
     desc: "Middle School at SMP Negeri 1 Kelara Jeneponto, South Sulawesi",
   },
   {
-    years: "2009-2012",
+    yearStart: "2009",
+    yearEnd: "2012",
     desc: "High School at SMA Negeri 1 Kelara Jeneponto, South Sulawesi",
   },
   {
-    years: "2012-2017",
+    yearStart: "2012",
+    yearEnd: "2017",
     desc: "College at Computer Science on STMIK Dipanegara Makassar, now is Known as University STMIK",
   },
   {
-    years: "2023-Now",
+    yearStart: "2023-March",
+    yearEnd: "Now",
     desc: " Working as Sofwere Engineer at CODE ID as Webdev (Frontend & Backend), infolve on several project now",
   },
 ];
 ---
 
 <main class="mx-auto mt-5 max-w-[600px]">
-  <h2 class="section-title text-3xl font-semibold tracking-wide text-slate-700">
+  <h2 class="section-title text-3xl font-semibold tracking-wide text-slate-700/70">
     Biography
   </h2>
 
@@ -41,10 +48,10 @@ const biographys: Biography[] = [
       biographys.map(
         (bio): Biography => (
           <div class="sub mt-5 grid grid-cols-5 items-center">
-            <h3 class="sub-title col-span-2 text-xl font-light text-slate-800/95">
-              {bio.years}
+            <h3 class="sub-title col-span-2 text-lg font-light text-slate-800/75">
+              {bio.yearStart} { bio.yearEnd !== "" ? `→ ${bio.yearEnd}` : null }
             </h3>
-            <p class="sub-desc col-span-3 text-base text-slate-800">
+            <p class="sub-desc col-span-3 text-base text-slate-800/85 text-justify">
               {bio.desc}
             </p>
           </div>
