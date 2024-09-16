@@ -1,14 +1,15 @@
 ---
-import Layout from "../layout/Layout.astro"
+import BaseLayout from "../layout/BaseLayout.astro"
 import Hero from "@components/Hero.astro"
 import SectionHeader from "@components/SectionHeader.astro"
 import JSLogo from "public/javascript-logo.svg?raw"
 ---
-<Layout title="Mattz Website">
+<BaseLayout title="Mattz Website">
   <Hero />
   <SectionHeader title="Stack i use"/>
-  <div class="cursor-pointer w-32 border border-gray-900/5 rounded-xl overflow-hidden text-center">
+  <div class="cursor-pointer w-32 border border-gray-900/10 shadow rounded-xl overflow-hidden text-center">
     <Fragment set:html={JSLogo} />
     <h2>Javascript</h2>
   </div>
-</Layout>
+  <div class="h-[3080px]"></div>
+</BaseLayout>

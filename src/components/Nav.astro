@@ -1,9 +1,39 @@
-<nav class="bg-alabaster text-textblack flex justify-between items-center mt-3 py-3 px-5 border border-gray-200 rounded-2xl">
-  <a href="/" class="logo text-3xl font-bold">mattz</a>
-  <div class="space-x-10 font-light">
-    <a href="/" class="font-medium">Home</a>
-    <a href="/articles">Articles</a>
-    <a href="/about">About</a>
+---
+import Link from "@components/Link.astro";
+import TerminalIcon from "public/logo.svg?raw";
+interface Link {
+  name: string,
+  href: string
+  }
+
+  const listLinks: Link[] = [
+    {
+      name: "Home",
+      href: "/"
+    },
+    {
+      name: "Articles",
+      href: "/articles"
+    },
+    {
+      name: "About",
+      href: "/about"
+    }
+  ]
+---
+<nav class="sticky top-0 bg-transparent backdrop-blur-md w-full shadow-lg p-3 mb-28">
+  <div class="wrapper flex items-center justify-between w-2/5 mx-auto">
+    <a href="/" class="group logo cursor-pointer flex items-center space-x-3">
+      <div class="w-10 text-black/85 group-hover:text-gray-800/85 duration-300" >
+        <Fragment set:html={TerminalIcon} />
+      </div>
+        <h2 class="font-bold font-hero text-2xl">Mattz-Dev</h2>
+    </a>
+    <div class="links space-x-5 text-lg">
+      {listLinks.map(({name, href}) => {
+      return <Link href={href}>{name}</Link>
+      })}
+      <button type="button">toggle mode</button>
+    </div>
   </div>
-  <!-- make a toggle to switch light/dark mode -->
 </nav>
