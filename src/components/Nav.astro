@@ -1,26 +1,28 @@
 ---
 import Link from "@components/Link.astro";
 import TerminalIcon from "public/logo.svg?raw";
+
 interface Link {
   name: string,
   href: string
-  }
+}
 
-  const listLinks: Link[] = [
-    {
-      name: "Home",
-      href: "/"
-    },
-    {
-      name: "Articles",
-      href: "/articles"
-    },
-    {
-      name: "About",
-      href: "/about"
-    }
-  ]
+const listLinks: Link[] = [
+  {
+    name: "Home",
+    href: "/"
+  },
+  {
+    name: "Articles",
+    href: "/articles"
+  },
+  {
+    name: "About",
+    href: "/about"
+  }
+]
 ---
+
 <nav class="sticky top-0 bg-transparent backdrop-blur-md w-full shadow-lg p-3 mb-28">
   <div class="wrapper flex items-center justify-between w-2/5 mx-auto">
     <a href="/" class="group logo cursor-pointer flex items-center space-x-3">
